@@ -16,13 +16,15 @@ public abstract class SportsTeam {
 	}
 	//end empty-constructor
 	public SportsTeam(String teamName, String teamMascot, String headCoach) {
-		this.teamName = "0";
-		this.teamMascot = "0";
-		this.headCoach = "0";
+		setTeamName("0");
+		setTeamMascot("0");
+		setHeadCoach("0");
 	}
 	//end preferred constructor
 	public double getWinPercentage() {
-		return wins/(wins+losses);
+		double wins1 = (int) wins;
+		double losses1 = (int) losses;
+		return wins1/(wins1+losses1);
 	}
 	//end WinPercentage method
 	public abstract double[] getStats();

@@ -19,16 +19,16 @@ public class NonPlayerCharacter extends GameCharacter{
 	
 	public NonPlayerCharacter() {
 		super();
-		active = false;
-		intelligenceType = "AVERAGE";
+		setActive(false);
+		setIntelligenceType("AVERAGE");
 		
 	}
 	//end empty-argument constructor
 	
 	public NonPlayerCharacter(String uniqueID, String personality, boolean active, String intelligenceType) {
 		super(uniqueID, personality);
-		this.active = active;
-		this.intelligenceType = intelligenceType;
+		setActive(active);
+		setIntelligenceType(intelligenceType);
 		
 	}
 	//end preferred constructor
@@ -36,8 +36,6 @@ public class NonPlayerCharacter extends GameCharacter{
 	public String reportStructure() {
 		super.reportStructure();
 		StringBuilder sb = new StringBuilder("==================================\n");
-		sb.append("UniqueID: "+getUniqueID()+"\n");
-		sb.append("Personality: "+getPersonality()+"\n");
 		sb.append("Active: "+isActive()+"\n");
 		sb.append("Intelligence: "+getIntelligenceType()+"\n");
 		sb.append("==================================\n");

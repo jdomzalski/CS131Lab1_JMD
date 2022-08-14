@@ -7,6 +7,7 @@ public class BasketballTeam extends SportsTeam {
 	private int freeThrowsAttempted;
 	
 	public BasketballTeam() {
+		super();
 		setFieldGoals(0);
 		setFieldGoalsAttempted(0);
 		setFreeThrows(0);
@@ -14,17 +15,22 @@ public class BasketballTeam extends SportsTeam {
 	}
 	//end empty-constructor
 	public BasketballTeam(String teamName, String teamMascot, String headCoach) {
+		super();
 		this.teamName = "0";
 		this.teamMascot = "0";
 		this.headCoach = "0";
 	}
 	//end preferred constructor
 	public double fieldGoalPercentage() {
-		return (fieldGoals/fieldGoalsAttempted);
+		double fieldGoals1 = (int) fieldGoals;
+		double fieldGoalsAttempted1 = (int) fieldGoalsAttempted;
+		return (fieldGoals1/fieldGoalsAttempted1);
 	}
 	//end fieldGoalPercentage method
 	public double freeThrowPercentage() {
-		return (freeThrows/freeThrowsAttempted);
+		double freeThrows1 = (int) freeThrows;
+		double freeThrowsAttempted1 = (int) freeThrowsAttempted;
+		return (freeThrows1/freeThrowsAttempted1);
 	}
 	//end freeThrowPercentage method
 	public double[] getStats() {
